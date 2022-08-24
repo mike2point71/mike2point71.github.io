@@ -1,6 +1,7 @@
 ## Welcome to Mike's Super Shoddy Pile of Links and Notes
 
 Ubuntu Install
+
 ```shell
 builtin cd ~ && \
 /bin/mkdir -pv Documents/nstall && builtin cd Documents/nstall && \
@@ -10,6 +11,10 @@ builtin cd ~ && \
 ./install_start_point.sh
 ```
 
+Pulling down dots
+
+```shell
+alias dtf="/bin/git --git-dir='$HOME/.dotfiles' --work-tree='$HOME'"
 
 
 
