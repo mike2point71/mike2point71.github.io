@@ -4,17 +4,20 @@ Ubuntu Install
 
 ```shell
 builtin cd ~ && \
-/bin/mkdir -pv Documents/nstall && builtin cd Documents/nstall && \
-/bin/sudo /bin/apt update && \
-{ builtin command -v wget || /bin/sudo /bin/apt install wget; } && \
-/bin/wget --https --secure-protocol=TLSv1_3 https://raw.githubusercontent.com/mike2point71/install/main/ubuntu/install_start_point.sh && \
+/usr/bin/mkdir -pv Documents/nstall && builtin cd Documents/nstall && \
+/usr/bin/sudo /usr/bin/apt update && \
+{ builtin command -v wget || /usr/bin/sudo /usr/bin/apt install wget; } && \
+/usr/bin/wget --https --secure-protocol=TLSv1_3 https://raw.githubusercontent.com/mike2point71/install/main/ubuntu/install_start_point.sh && \
 ./install_start_point.sh
 ```
 
 Pulling down dots
 
 ```shell
-alias dtf="/bin/git --git-dir='$HOME/.dotfiles' --work-tree='$HOME'"
+builtin alias dtf="$(builtin if builtin command -v brew && builtin command -v $(brew --prefix)/bin/git; builtin then builtin echo "$(brew --prefix)"; builtin else builtin echo "/usr")"/bin/git --git-dir='$HOME/.dotfiles' --work-tree='$HOME'"
+
+if builtin command -v brew && builtin command -v $(brew --prefix)/bin/git; then pfx="$(brew --prefix)"; else pfx='/usr' fi; alias dtf="$pfx/bin/git --git-dir='$HOME/.dotfiles' --work-tree='$HOME'"
+```
 
 
 
