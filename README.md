@@ -1,4 +1,20 @@
-## Welcome to GitHub Pages
+## Welcome to Mike's Super Shoddy Pile of Links and Notes
+
+Ubuntu Install
+```shell
+builtin cd ~ && \
+/bin/mkdir -pv Documents/nstall && builtin cd Documents/nstall
+/bin/sudo /bin/apt update && \
+{ builtin command -v wget || /bin/sudo /bin/apt install wget; } && \
+/bin/wget --https --secure-protocol=TLSv1_3 https://raw.githubusercontent.com/mike2point71/install/main/ubuntu/install_start_point.sh && \
+./install_start_point.sh
+```
+
+
+
+
+
+
 
 You can use the [editor on GitHub](https://github.com/mike2point71/mike2point71.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
