@@ -1,6 +1,8 @@
-## Welcome to Mike's Super Shoddy Pile of Links and Notes
+# Welcome to Mike's Super Shoddy Pile of Links and Notes
 
-Ubuntu Install
+## Here are some commands I seem to value have SUPER handy
+
+### Ubuntu Install
 
 ```shell
 builtin cd ~ && \
@@ -11,16 +13,37 @@ builtin cd ~ && \
 ./install_start_point.sh
 ```
 
-Pulling down dots
+
+### Pulling down dots
 
 ```shell
-builtin alias dtf="$(builtin if builtin command -v brew && builtin command -v $(brew --prefix)/bin/git; builtin then builtin echo "$(brew --prefix)"; builtin else builtin echo "/usr")"/bin/git --git-dir='$HOME/.dotfiles' --work-tree='$HOME'"
-
-if builtin command -v brew && builtin command -v $(brew --prefix)/bin/git; then pfx="$(brew --prefix)"; else pfx='/usr' fi; alias dtf="$pfx/bin/git --git-dir='$HOME/.dotfiles' --work-tree='$HOME'"
+if builtin command -v brew && builtin command -v $(brew --prefix)/bin/git; then pfx="$(brew --prefix)"; else pfx='/usr' fi;
+$pfx/bin/git clone --bare git@github.com:mike2point71/dots.git $HOME/.dotfiles && \
+alias dtf="$pfx/bin/git --git-dir='$HOME/.dotfiles' --work-tree='$HOME'" && \
+tfile="$(mktemp)" && \
+if dtf checkout 2>"$tfile"; then
+  :  # This means good
+else
+  cat "$tfile" | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{} && \
+  dtf checkout --recurse-submodules
+fi && \
 ```
 
+## Here's random stuff I thought was important at the time I read it.
 
+### Really great commit message examples stolen from <https://deno.land/std@0.153.0>
 
+Examples of good titles:
+
+* fix(http): Fix race condition in server
+* docs(fmt): Update docstrings
+* feat(log): Handle nested messages
+
+Examples of bad titles:
+
+* fix #7123
+* update docs
+* fix bugs
 
 
 
