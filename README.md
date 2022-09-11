@@ -1,19 +1,16 @@
 # Welcome to Mike's Super Shoddy Pile of Links and Notes
 
-1. [Ubuntu Install Stuff](./ubuntu-install-notes.html)
+1. ## Installing
+  1. [Install Stuff](./install-notes.html)
+  1. [Dotfile Management](./dotfile-stuff.html)
+1. ## The Best Coding
+  1. [Commit message ~plagiarism~ inspiration](./committing-good.html)
+  1. ### Java For Days
+    1. [Stream snippits I stole](stream-cheatsheet.html)
+1. ## CLI/TUI Fanboy
 
-## Here are some commands I seem to value have SUPER handy
 
-### Ubuntu Install
 
-```shell
-builtin cd ~ && \
-/usr/bin/mkdir -pv Documents/nstall && builtin cd Documents/nstall && \
-/usr/bin/sudo /usr/bin/apt update && \
-{ builtin command -v wget || /usr/bin/sudo /usr/bin/apt install wget; } && \
-/usr/bin/wget --https --secure-protocol=TLSv1_3 https://raw.githubusercontent.com/mike2point71/install/main/ubuntu/install_start_point.sh && \
-./install_start_point.sh
-```
 
 
 ### Pulling down dots
