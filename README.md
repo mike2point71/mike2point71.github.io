@@ -1,5 +1,7 @@
 # Welcome to Mike's Super Shoddy Pile of Links and Notes
 
+1. [Ubuntu Install Stuff](./ubuntu-install-notes.html)
+
 ## Here are some commands I seem to value have SUPER handy
 
 ### Ubuntu Install
