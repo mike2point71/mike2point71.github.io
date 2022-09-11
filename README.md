@@ -1,12 +1,12 @@
 # Welcome to Mike's Super Shoddy Pile of Links and Notes
 
 1. ## Installing
-  1. [Install Stuff](./install-notes.html)
-  1. [Dotfile Management](./dotfile-stuff.html)
+    1. [Install Stuff](./install-notes.html)
+    1. [Dotfile Management](./dotfile-stuff.html)
 1. ## The Best Coding
-  1. [Commit message ~plagiarism~ inspiration](./committing-good.html)
-  1. ### Java For Days
-    1. [Stream snippits I stole](stream-cheatsheet.html)
+    1. [Commit message ~plagiarism~ inspiration](./committing-good.html)
+    1. ### Java For Days
+        1. [Stream snippits I stole](stream-cheatsheet.html)
 1. ## CLI/TUI Fanboy
 
 
