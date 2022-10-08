@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /usr/bin/env bash
 
 if [ ! $(whoami) = 'root' ]; then
   echo "Need to run this with sudo"
@@ -8,9 +8,12 @@ fi
 setopt -e
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get upgrade -y
+apt-get needrestart
+apt-get dist-upgrade -y
 if [ -f /var/run/reboot-required ]; then
   reboot now
+else
+  needrestart
 fi
 
 # apt-get install -y needrestart unattended-upgrades apt-listchanges
