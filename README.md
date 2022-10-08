@@ -1,7 +1,7 @@
 # Welcome to Mike's Super Shoddy Pile of Links and Notes
 
 1. ## Installing
-    1. [Install Stuff](./install-notes.html)
+    1. [Ubuntu Setup](./ubuntu-setup.md)
     1. [Dotfile Management](./dotfile-stuff.html)
 1. ## The Best Coding
     1. [Commit message ~plagiarism~ inspiration](./committing-good.html)
