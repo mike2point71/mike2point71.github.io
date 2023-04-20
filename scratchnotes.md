@@ -11,3 +11,10 @@ Array.prototype.slice
         return parseFloat(e.outerText.substring(2));})
     .reduce((a, b) => a + b, 0);
 ```
+
+
+## URL Encode with jq
+
+```bash
+jq -rn --arg x 'input text' '$x|@uri'
+```
